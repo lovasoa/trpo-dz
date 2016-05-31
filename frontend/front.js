@@ -2,14 +2,15 @@ class ListViewer {
   view(model) {
     const tablename = model.apiname,
           array = model.results;
-    if (array.length === 0) return $("<b>Пустой</b>");
+    const $button = $("<button>Создать новый</button>")
+                      .on("click", evt=>model.create());
+    if (array.length === 0) return $button;
     const headers = Object.keys(array[0]).filter(col => col!=tablename+"_id");
     return $("<div>").append(
-      $("<ul>").append($.map(array, e => this.viewElem(model, headers, e)))
-    ).append(
-      $("<button>Создать новый</button>")
-        .on("click", evt=>model.create())
-    );
+      $("<ul>").append(
+        $.map(array, e => this.viewElem(model, headers, e)
+      ))
+    ).append($button);
   }
 
   viewElem(model, headers, e) {
