@@ -1,11 +1,7 @@
 <?php
 class LayerCommunication {
-  public function __construct($db) {
+  public function __construct($db, $modules) {
     // $tables = array("professor", "discipline", "material")
-    $modules = array(
-        new BasicModel($db, "professor"),
-        new BasicModel($db, "discipline"),
-        new BasicModel($db, "material"));
     $this->operator = $modules[0];
     foreach ($modules as $k=>$m) {
       if($k>0) $modules[$k-1]->setNext($modules[$k]);

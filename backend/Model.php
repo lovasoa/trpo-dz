@@ -25,9 +25,15 @@ abstract class Model implements MogetOtvetchat {
     $this->next = $next;
     return $next;
   }
+  public function getNext() {
+    return $this->next;
+  }
 
   public function setName($name) {
     $this->name = $name;
+  }
+  public function getName() {
+    return $this->name;
   }
 }
 ?>
