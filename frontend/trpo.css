@@ -1,0 +1,24 @@
+label {
+  display:block;
+}
+
+li{
+  margin-bottom: 20px;
+}
+
+
+
+menu li {
+  display: inline-block;
+  width:150px;
+  padding:5px;
+  background-color: #edd;
+  cursor:  pointer;
+}
+
+menu li:hover {
+  text-decoration: underline;
+}
+menu li.selected {
+  background-color: #d99;
+}

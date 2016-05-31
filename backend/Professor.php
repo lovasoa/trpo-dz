@@ -9,10 +9,4 @@ class Professor {
     return $this->gateway->getAll();
   }
 }
-
-/*
-$db = new Database();
-$p = new Professor($db);
-var_dump($p->getAll())
-*/
 ?>

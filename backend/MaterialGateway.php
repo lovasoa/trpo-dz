@@ -10,7 +10,7 @@ class MaterialGateway {
     foreach($this->db->query("SELECT * FROM materials") as $prof) {
       $res[] = array(
         "material_id" => (int) $prof["material_id"],
-        "professor_id" => (int) $prof["professor_id"],
+        "discipline_id" => (int) $prof["discipline_id"],
         "filename" => $prof["filename"]
       );
     }
