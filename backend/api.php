@@ -6,9 +6,9 @@ $db = new Database();
 $modules = array(
     StudentAdapter::fabric($db, "discipline"),
     StudentAdapter::fabric($db, "material"),
-    new BasicModel($db, "professor"),
-    new BasicModel($db, "discipline"),
-    new BasicModel($db, "material")
+    new ProfessorsModel($db),
+    new DisciplinesModel($db),
+    new MaterialsModel($db)
 );
 $api = new LayerCommunication($db, $modules);
 echo $api->otvetchat($_GET);

@@ -1,10 +1,17 @@
 <?php
 class Database extends PDO {
     //Variable declaration
+
     private $host = "localhost";
     private $passwd = "";
     private $username = "root";
     private $dbname = "trpo";
+/*
+    private $host = "mysql1.alwaysdata.com";
+    private $passwd = "trpo";
+    private $username = "ophir_trpo";
+    private $dbname = "ophir_trpo";
+*/
 
     //Connect to DB when the class construct
     public function __construct($host=NULL, $dbname=NULL, $username=NULL, $passwd=NULL) {
