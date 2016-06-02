@@ -32,6 +32,7 @@ class Disciplines extends TableModule {
 }
 
 class Materials extends TableModule {
+  private $filter = "";
   function __construct($discipline) {
     $this->filter = $discipline;
     parent::__construct();
@@ -55,6 +56,8 @@ class Materials extends TableModule {
 
 
 abstract class Mapper {
+  private $db = NULL;
+  private $table = NULL;
   function __construct(Database $db, $table) {
     $this->db = $db;
     $this->table = $table;
@@ -82,11 +85,15 @@ abstract class Mapper {
 }
 
 class DisciplineMapper extends Mapper{
+  /**
+  * @var Disciplines The discipline to create
+  */
+  private $discipline;
   function __construct($db) {
     parent::__construct($db, "discipline");
   }
   /**
-  * @return Disciplines : a discipline table module object
+  * @return Disciplines a discipline table module object
   */
   public function read(array $zapoc) {
     return $this->fillModel(new Disciplines);
@@ -94,6 +101,10 @@ class DisciplineMapper extends Mapper{
 }
 
 class MaterialsMapper extends Mapper{
+  /**
+  * @var Materials
+  */
+  private $meterials;
   function __construct($db) {
     parent::__construct($db, "material");
   }
@@ -108,6 +119,7 @@ class MaterialsMapper extends Mapper{
 
 ///// Client interface code
 class StudentAdapter extends Model {
+  private $mapper = NULL;
   function __construct($name, Mapper $mapper) {
     $this->setName($name);
     $this->mapper = $mapper;

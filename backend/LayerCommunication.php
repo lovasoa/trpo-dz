@@ -1,6 +1,10 @@
 <?php
 class LayerCommunication {
-  public function __construct($db, $modules) {
+  /**
+  * @var MogetOtvetchat first handler of the incoming query 
+  */
+  private $operator;
+  public function __construct(Database $db, $modules) {
     // $tables = array("professor", "discipline", "material")
     $this->operator = $modules[0];
     foreach ($modules as $k=>$m) {

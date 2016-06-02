@@ -2,7 +2,13 @@
 require_once("utils.php");
 
 class BasicModel extends Model {
-  public function __construct($db, $tablename) {
+  /**
+  * Gateway to the database
+  * @var BasicGateway
+  */
+  private $gateway = NULL;
+
+  public function __construct(Database $db, $tablename) {
     $this->gateway = new BasicGateway($db, $tablename);
     $this->setName($tablename);
   }

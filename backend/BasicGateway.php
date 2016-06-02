@@ -2,7 +2,10 @@
 require_once("utils.php");
 
 class BasicGateway {
-  public function __construct($db, $tablename) {
+  private $db = NULL;
+  private $tablename;
+
+  public function __construct(Database $db, $tablename) {
     $this->db = $db;
     $this->tablename = $tablename;
   }
