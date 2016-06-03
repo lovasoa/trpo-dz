@@ -2,7 +2,7 @@
 class Database extends PDO {
     //Variable declaration
 
-    private $host = "localhost";
+    private $host = "127.0.0.1";
     private $passwd = "";
     private $username = "root";
     private $dbname = "trpo";

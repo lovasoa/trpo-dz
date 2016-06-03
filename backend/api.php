@@ -1,6 +1,7 @@
 <?php
 require_once 'utils.php';
 require_once 'student.php';
+header('Content-Type: text/html; charset=utf-8');
 
 $db = new Database();
 $modules = array(
