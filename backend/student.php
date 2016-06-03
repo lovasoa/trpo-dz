@@ -33,12 +33,17 @@ class Disciplines extends TableModule {
 
 class Materials extends TableModule {
   private $filter = "";
-  function __construct($discipline) {
+  function __construct($discipline, $search) {
     $this->filter = $discipline;
+    $this->search = $search;
     parent::__construct();
   }
   function view() {
-    $ret = "";
+    $ret = "<form action='api.php'>
+		<input type='hidden' name='student' value='material'>
+		<input type='hidden' name='discipline' value='$this->filter'>
+		<input placeholder='поиск' name='search' value='$this->search'>
+	   ";
     foreach ($this->getRows() as $material) {
       $name = $material["filename"];
       $ret .= "<p>" .
@@ -48,7 +53,7 @@ class Materials extends TableModule {
     return $ret;
   }
   function add(array $row) {
-    if($row["discipline_id"]==$this->filter) {
+    if($row["discipline_id"]==$this->filter && ($this->search === '' || strpos($row["filename"],$this->search) !== FALSE)) {
       parent::add($row);
     }
   }
@@ -113,7 +118,8 @@ class MaterialsMapper extends Mapper{
   */
   public function read(array $zaproc) {
     $filter = $zaproc["discipline"];
-    return $this->fillModel(new Materials($filter));
+    $search = (isset($zaproc["search"])) ? $zaproc["search"] : '';
+    return $this->fillModel(new Materials($filter, $search));
   }
 }
 
