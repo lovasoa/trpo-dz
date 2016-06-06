@@ -1,0 +1,8 @@
+<map id="Model" name="Model">
+<area shape="rect" id="node3" href="$classBasicModel.html" title="{BasicModel\n|&#45; $gateway\l|+ __construct()\l+ getValue()\l}" alt="" coords="151,359,261,451"/>
+<area shape="rect" id="node7" href="$classStudentAdapter.html" title="{StudentAdapter\n|&#45; $mapper\l|+ __construct()\l+ otvetchat()\l+ getValue()\l+ fabric()\l}" alt="" coords="286,344,398,465"/>
+<area shape="rect" id="node2" href="$interfaceMogetOtvetchat.html" title="{MogetOtvetchat\n||+ otvetchat()\l+ setNext()\l}" alt="" coords="217,5,331,97"/>
+<area shape="rect" id="node4" href="$classDisciplinesModel.html" title="{DisciplinesModel\n||+ __construct()\l}" alt="" coords="5,513,127,591"/>
+<area shape="rect" id="node5" href="$classMaterialsModel.html" title="{MaterialsModel\n||+ __construct()\l}" alt="" coords="151,513,261,591"/>
+<area shape="rect" id="node6" href="$classProfessorsModel.html" title="{ProfessorsModel\n||+ __construct()\l}" alt="" coords="286,513,406,591"/>
+</map>

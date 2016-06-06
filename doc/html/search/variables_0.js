@@ -1,0 +1,20 @@
+var searchData=
+[
+  ['_24api',['$api',['../api_8php.html#afce321e6f53c241037f871b50680cf1c',1,'api.php']]],
+  ['_24db',['$db',['../classBasicGateway.html#a1fa3127fc82f96b1436d871ef02be319',1,'BasicGateway\$db()'],['../classMapper.html#a1fa3127fc82f96b1436d871ef02be319',1,'Mapper\$db()'],['../api_8php.html#a1fa3127fc82f96b1436d871ef02be319',1,'$db():&#160;api.php']]],
+  ['_24dbname',['$dbname',['../classDatabase.html#ac5111a571fffa2499732833bb7f0d8c1',1,'Database']]],
+  ['_24discipline',['$discipline',['../classDisciplineMapper.html#a2864c70d49ef5319e454f593d7643518',1,'DisciplineMapper']]],
+  ['_24filter',['$filter',['../classMaterials.html#aac53bdb48bdd96ff9c20e2a86f48ce5f',1,'Materials']]],
+  ['_24gateway',['$gateway',['../classBasicModel.html#ae71784a059e1b3a4577acdcdada18c7d',1,'BasicModel']]],
+  ['_24host',['$host',['../classDatabase.html#a711797613cb863ca0756df789c396bf2',1,'Database']]],
+  ['_24mapper',['$mapper',['../classStudentAdapter.html#ace79db87eaeb4a62b8d0b4323f91ebe6',1,'StudentAdapter']]],
+  ['_24materials',['$materials',['../classMaterialsMapper.html#a2e685401bc9d8b42ae8760bedbb1392a',1,'MaterialsMapper']]],
+  ['_24modules',['$modules',['../api_8php.html#a19e625c76c6796e995f33d323ee3aa84',1,'api.php']]],
+  ['_24next',['$next',['../classModel.html#ac24f6189c7888ec50c77f7e65a837a62',1,'Model']]],
+  ['_24operator',['$operator',['../classLayerCommunication.html#a399520ceafe483476c4657202454db00',1,'LayerCommunication']]],
+  ['_24passwd',['$passwd',['../classDatabase.html#a87911b6664e118fbbfa8da7bb7a04b0f',1,'Database']]],
+  ['_24rows',['$rows',['../classTableModule.html#ace2ec39e7df3899fa8df9640ec274b03',1,'TableModule']]],
+  ['_24table',['$table',['../classMapper.html#ae8876a14058f368335baccf35af4a22b',1,'Mapper']]],
+  ['_24tablename',['$tablename',['../classBasicGateway.html#ab55152af3e5453213c2891ba55a0c6d5',1,'BasicGateway']]],
+  ['_24username',['$username',['../classDatabase.html#a0eb82aa5f81cf845de4b36cd653c42cf',1,'Database']]]
+];

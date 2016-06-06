@@ -1,0 +1,127 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.9.1"/>
+<title>TRPO: Исходный файл backend/api.php</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<script type="text/javascript">
+  $(document).ready(function() { init_search(); });
+</script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td style="padding-left: 0.5em;">
+   <div id="projectname">TRPO
+   &#160;<span id="projectnumber">1.0.0</span>
+   </div>
+   <div id="projectbrief">сайт кафедры</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Создано системой Doxygen 1.8.9.1 -->
+<script type="text/javascript">
+var searchBox = new SearchBox("searchBox", "search",false,'Поиск');
+</script>
+  <div id="navrow1" class="tabs">
+    <ul class="tablist">
+      <li><a href="index.html"><span>Титульная&#160;страница</span></a></li>
+      <li><a href="pages.html"><span>Описания</span></a></li>
+      <li><a href="annotated.html"><span>Структуры&#160;данных</span></a></li>
+      <li class="current"><a href="files.html"><span>Файлы</span></a></li>
+      <li>
+        <div id="MSearchBox" class="MSearchBoxInactive">
+        <span class="left">
+          <img id="MSearchSelect" src="search/mag_sel.png"
+               onmouseover="return searchBox.OnSearchSelectShow()"
+               onmouseout="return searchBox.OnSearchSelectHide()"
+               alt=""/>
+          <input type="text" id="MSearchField" value="Поиск" accesskey="S"
+               onfocus="searchBox.OnSearchFieldFocus(true)" 
+               onblur="searchBox.OnSearchFieldFocus(false)" 
+               onkeyup="searchBox.OnSearchFieldChange(event)"/>
+          </span><span class="right">
+            <a id="MSearchClose" href="javascript:searchBox.CloseResultsWindow()"><img id="MSearchCloseImg" border="0" src="search/close.png" alt=""/></a>
+          </span>
+        </div>
+      </li>
+    </ul>
+  </div>
+  <div id="navrow2" class="tabs2">
+    <ul class="tablist">
+      <li><a href="files.html"><span>Файлы</span></a></li>
+      <li><a href="globals.html"><span>Список&#160;членов&#160;всех&#160;файлов</span></a></li>
+    </ul>
+  </div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="dir_8c739bbef76d64b22d6b0911c526dd76.html">backend</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="headertitle">
+<div class="title">api.php</div>  </div>
+</div><!--header-->
+<div class="contents">
+<a href="api_8php.html">См. документацию.</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;&lt;?php</div>
+<div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;require_once <span class="stringliteral">&#39;utils.php&#39;</span>;</div>
+<div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;require_once <span class="stringliteral">&#39;student.php&#39;</span>;</div>
+<div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;header(<span class="stringliteral">&#39;Content-Type: text/html; charset=utf-8&#39;</span>);</div>
+<div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;</div>
+<div class="line"><a name="l00006"></a><span class="lineno"><a class="line" href="api_8php.html#a1fa3127fc82f96b1436d871ef02be319">    6</a></span>&#160;<a class="code" href="api_8php.html#a1fa3127fc82f96b1436d871ef02be319">$db</a> = <span class="keyword">new</span> <a class="code" href="classDatabase.html">Database</a>();</div>
+<div class="line"><a name="l00007"></a><span class="lineno"><a class="line" href="api_8php.html#a19e625c76c6796e995f33d323ee3aa84">    7</a></span>&#160;<a class="code" href="api_8php.html#a19e625c76c6796e995f33d323ee3aa84">$modules</a> = array(</div>
+<div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;    <a class="code" href="classStudentAdapter.html#a56537d34f84fee8e18d0a2831e8d11d9">StudentAdapter::fabric</a>(<a class="code" href="api_8php.html#a1fa3127fc82f96b1436d871ef02be319">$db</a>, <span class="stringliteral">&quot;discipline&quot;</span>),</div>
+<div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;    <a class="code" href="classStudentAdapter.html#a56537d34f84fee8e18d0a2831e8d11d9">StudentAdapter::fabric</a>(<a class="code" href="api_8php.html#a1fa3127fc82f96b1436d871ef02be319">$db</a>, <span class="stringliteral">&quot;material&quot;</span>),</div>
+<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;    <span class="keyword">new</span> <a class="code" href="classProfessorsModel.html">ProfessorsModel</a>(<a class="code" href="api_8php.html#a1fa3127fc82f96b1436d871ef02be319">$db</a>),</div>
+<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;    <span class="keyword">new</span> <a class="code" href="classDisciplinesModel.html">DisciplinesModel</a>(<a class="code" href="api_8php.html#a1fa3127fc82f96b1436d871ef02be319">$db</a>),</div>
+<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;    <span class="keyword">new</span> <a class="code" href="classMaterialsModel.html">MaterialsModel</a>(<a class="code" href="api_8php.html#a1fa3127fc82f96b1436d871ef02be319">$db</a>)</div>
+<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;);</div>
+<div class="line"><a name="l00014"></a><span class="lineno"><a class="line" href="api_8php.html#afce321e6f53c241037f871b50680cf1c">   14</a></span>&#160;<a class="code" href="api_8php.html#afce321e6f53c241037f871b50680cf1c">$api</a> = <span class="keyword">new</span> <a class="code" href="classLayerCommunication.html">LayerCommunication</a>(<a class="code" href="api_8php.html#a1fa3127fc82f96b1436d871ef02be319">$db</a>, <a class="code" href="api_8php.html#a19e625c76c6796e995f33d323ee3aa84">$modules</a>);</div>
+<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;echo <a class="code" href="api_8php.html#afce321e6f53c241037f871b50680cf1c">$api</a>-&gt;otvetchat($_GET);</div>
+<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;?&gt;</div>
+<div class="ttc" id="classMaterialsModel_html"><div class="ttname"><a href="classMaterialsModel.html">MaterialsModel</a></div><div class="ttdef"><b>Definition:</b> <a href="MaterialsModel_8php_source.html#l00002">MaterialsModel.php:2</a></div></div>
+<div class="ttc" id="classDatabase_html"><div class="ttname"><a href="classDatabase.html">Database</a></div><div class="ttdef"><b>Definition:</b> <a href="Database_8php_source.html#l00002">Database.php:2</a></div></div>
+<div class="ttc" id="api_8php_html_afce321e6f53c241037f871b50680cf1c"><div class="ttname"><a href="api_8php.html#afce321e6f53c241037f871b50680cf1c">$api</a></div><div class="ttdeci">$api</div><div class="ttdef"><b>Definition:</b> <a href="api_8php_source.html#l00014">api.php:14</a></div></div>
+<div class="ttc" id="classLayerCommunication_html"><div class="ttname"><a href="classLayerCommunication.html">LayerCommunication</a></div><div class="ttdef"><b>Definition:</b> <a href="LayerCommunication_8php_source.html#l00002">LayerCommunication.php:2</a></div></div>
+<div class="ttc" id="classStudentAdapter_html_a56537d34f84fee8e18d0a2831e8d11d9"><div class="ttname"><a href="classStudentAdapter.html#a56537d34f84fee8e18d0a2831e8d11d9">StudentAdapter\fabric</a></div><div class="ttdeci">static fabric(Database $db, $name)</div><div class="ttdef"><b>Definition:</b> <a href="student_8php_source.html#l00143">student.php:143</a></div></div>
+<div class="ttc" id="api_8php_html_a1fa3127fc82f96b1436d871ef02be319"><div class="ttname"><a href="api_8php.html#a1fa3127fc82f96b1436d871ef02be319">$db</a></div><div class="ttdeci">$db</div><div class="ttdef"><b>Definition:</b> <a href="api_8php_source.html#l00006">api.php:6</a></div></div>
+<div class="ttc" id="classProfessorsModel_html"><div class="ttname"><a href="classProfessorsModel.html">ProfessorsModel</a></div><div class="ttdef"><b>Definition:</b> <a href="ProfessorsModel_8php_source.html#l00002">ProfessorsModel.php:2</a></div></div>
+<div class="ttc" id="classDisciplinesModel_html"><div class="ttname"><a href="classDisciplinesModel.html">DisciplinesModel</a></div><div class="ttdef"><b>Definition:</b> <a href="DisciplinesModel_8php_source.html#l00002">DisciplinesModel.php:2</a></div></div>
+<div class="ttc" id="api_8php_html_a19e625c76c6796e995f33d323ee3aa84"><div class="ttname"><a href="api_8php.html#a19e625c76c6796e995f33d323ee3aa84">$modules</a></div><div class="ttdeci">$modules</div><div class="ttdef"><b>Definition:</b> <a href="api_8php_source.html#l00007">api.php:7</a></div></div>
+</div><!-- fragment --></div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+Документация по TRPO. Последние изменения: Вс 5 Июн 2016 22:56:31. Создано системой &#160;<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="doxygen.png" alt="doxygen"/>
+</a> 1.8.9.1
+</small></address>
+</body>
+</html>

@@ -1,0 +1,9 @@
+<map id="Иерархия классов. Графический вид." name="Иерархия классов. Графический вид.">
+<area shape="rect" id="node1" href="$interfaceMogetOtvetchat.html" title="MogetOtvetchat" alt="" coords="5,81,120,108"/>
+<area shape="rect" id="node2" href="$classModel.html" title="Model" alt="" coords="168,81,225,108"/>
+<area shape="rect" id="node3" href="$classBasicModel.html" title="BasicModel" alt="" coords="284,56,375,83"/>
+<area shape="rect" id="node7" href="$classStudentAdapter.html" title="StudentAdapter" alt="" coords="273,107,385,133"/>
+<area shape="rect" id="node4" href="$classDisciplinesModel.html" title="DisciplinesModel" alt="" coords="433,5,555,32"/>
+<area shape="rect" id="node5" href="$classMaterialsModel.html" title="MaterialsModel" alt="" coords="439,56,549,83"/>
+<area shape="rect" id="node6" href="$classProfessorsModel.html" title="ProfessorsModel" alt="" coords="434,107,554,133"/>
+</map>

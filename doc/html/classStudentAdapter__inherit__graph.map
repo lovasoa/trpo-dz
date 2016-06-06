@@ -1,0 +1,4 @@
+<map id="StudentAdapter" name="StudentAdapter">
+<area shape="rect" id="node2" href="$classModel.html" title="{Model\n|&#45; $next\l|+ otvetchat()\l+ getValue()\l+ setNext()\l+ getNext()\l+ setName()\l+ getName()\l}" alt="" coords="15,145,111,296"/>
+<area shape="rect" id="node3" href="$interfaceMogetOtvetchat.html" title="{MogetOtvetchat\n||+ otvetchat()\l+ setNext()\l}" alt="" coords="5,5,120,97"/>
+</map>

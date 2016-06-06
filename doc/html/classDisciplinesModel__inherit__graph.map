@@ -1,0 +1,5 @@
+<map id="DisciplinesModel" name="DisciplinesModel">
+<area shape="rect" id="node2" href="$classBasicModel.html" title="{BasicModel\n|&#45; $gateway\l|+ __construct()\l+ getValue()\l}" alt="" coords="11,344,121,436"/>
+<area shape="rect" id="node3" href="$classModel.html" title="{Model\n|&#45; $next\l|+ otvetchat()\l+ getValue()\l+ setNext()\l+ getNext()\l+ setName()\l+ getName()\l}" alt="" coords="18,145,114,296"/>
+<area shape="rect" id="node4" href="$interfaceMogetOtvetchat.html" title="{MogetOtvetchat\n||+ otvetchat()\l+ setNext()\l}" alt="" coords="9,5,123,97"/>
+</map>

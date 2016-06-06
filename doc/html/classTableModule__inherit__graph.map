@@ -1,0 +1,4 @@
+<map id="TableModule" name="TableModule">
+<area shape="rect" id="node2" href="$classDisciplines.html" title="{Disciplines\n||+ view()\l}" alt="" coords="5,189,92,267"/>
+<area shape="rect" id="node3" href="$classMaterials.html" title="{Materials\n|&#45; $filter\l|+ __construct()\l+ view()\l+ add()\l}" alt="" coords="116,175,227,281"/>
+</map>

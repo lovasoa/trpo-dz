@@ -1,0 +1,4 @@
+<map id="Mapper" name="Mapper">
+<area shape="rect" id="node2" href="$classDisciplineMapper.html" title="{DisciplineMapper\n|&#45; $discipline\l|+ __construct()\l+ read()\l}" alt="" coords="5,189,128,281"/>
+<area shape="rect" id="node3" href="$classMaterialsMapper.html" title="{MaterialsMapper\n|&#45; $materials\l|+ __construct()\l+ read()\l}" alt="" coords="153,189,271,281"/>
+</map>

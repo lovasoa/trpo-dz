@@ -1,0 +1,73 @@
+\hypertarget{classBasicGateway}{}\section{Класс Basic\+Gateway}
+\label{classBasicGateway}\index{Basic\+Gateway@{Basic\+Gateway}}
+\subsection*{Открытые члены}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{classBasicGateway_a8f81fcf05bbf2ecccf1c8ac68043e58f}{}\hyperlink{classBasicGateway_a8f81fcf05bbf2ecccf1c8ac68043e58f}{\+\_\+\+\_\+construct} (\hyperlink{classDatabase}{Database} \$db, \$tablename)\label{classBasicGateway_a8f81fcf05bbf2ecccf1c8ac68043e58f}
+
+\begin{DoxyCompactList}\small\item\em Create a new gateway for the given table. \end{DoxyCompactList}\item 
+\hypertarget{classBasicGateway_a479340638f40df0f02d833b8326b26d5}{}\hyperlink{classBasicGateway_a479340638f40df0f02d833b8326b26d5}{get\+All} ()\label{classBasicGateway_a479340638f40df0f02d833b8326b26d5}
+
+\begin{DoxyCompactList}\small\item\em Get an array of all elements in the table. \end{DoxyCompactList}\item 
+\hyperlink{classBasicGateway_aaca2505381d589b069c4a5ba870be63d}{update} (\$data, \$col, \$val)
+\item 
+\hyperlink{classBasicGateway_a26ff35b0c74ca7faf3f2aa20cfa8bf18}{create} ()
+\item 
+\hyperlink{classBasicGateway_ae3acd2ba4018730745410b9cd59aff75}{delete} (\$data)
+\end{DoxyCompactItemize}
+
+
+\subsection{Подробное описание}
+Represent a gateway to a database table. This should be used so that business logic classes didn\textquotesingle{}t have to interact with the database 
+
+\subsection{Методы}
+\hypertarget{classBasicGateway_a26ff35b0c74ca7faf3f2aa20cfa8bf18}{}\index{Basic\+Gateway@{Basic\+Gateway}!create@{create}}
+\index{create@{create}!Basic\+Gateway@{Basic\+Gateway}}
+\subsubsection[{create}]{\setlength{\rightskip}{0pt plus 5cm}Basic\+Gateway\+::create (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{classBasicGateway_a26ff35b0c74ca7faf3f2aa20cfa8bf18}
+Add an empty element in the table \hypertarget{classBasicGateway_ae3acd2ba4018730745410b9cd59aff75}{}\index{Basic\+Gateway@{Basic\+Gateway}!delete@{delete}}
+\index{delete@{delete}!Basic\+Gateway@{Basic\+Gateway}}
+\subsubsection[{delete}]{\setlength{\rightskip}{0pt plus 5cm}Basic\+Gateway\+::delete (
+\begin{DoxyParamCaption}
+\item[{}]{\$data}
+\end{DoxyParamCaption}
+)}\label{classBasicGateway_ae3acd2ba4018730745410b9cd59aff75}
+Remove an element from the table 
+\begin{DoxyParams}{Аргументы}
+{\em data} & array \+: The line to remove \\
+\hline
+\end{DoxyParams}
+\hypertarget{classBasicGateway_aaca2505381d589b069c4a5ba870be63d}{}\index{Basic\+Gateway@{Basic\+Gateway}!update@{update}}
+\index{update@{update}!Basic\+Gateway@{Basic\+Gateway}}
+\subsubsection[{update}]{\setlength{\rightskip}{0pt plus 5cm}Basic\+Gateway\+::update (
+\begin{DoxyParamCaption}
+\item[{}]{\$data, }
+\item[{}]{\$col, }
+\item[{}]{\$val}
+\end{DoxyParamCaption}
+)}\label{classBasicGateway_aaca2505381d589b069c4a5ba870be63d}
+Update a given line in the table 
+\begin{DoxyParams}{Аргументы}
+{\em data} & The current line \\
+\hline
+{\em col} & Name of the column to update \\
+\hline
+{\em val} & New value to insert \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyExceptions}{Исключения}
+{\em Exception} & S\+Q\+L error \\
+\hline
+\end{DoxyExceptions}
+\begin{DoxyReturn}{Возвращает}
+An array containing information about the database query (number of affected rows) 
+\end{DoxyReturn}
+
+
+Объявления и описания членов класса находятся в файле\+:\begin{DoxyCompactItemize}
+\item 
+backend/Basic\+Gateway.\+php\end{DoxyCompactItemize}

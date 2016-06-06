@@ -1,0 +1,5 @@
+<map id="Иерархия классов. Графический вид." name="Иерархия классов. Графический вид.">
+<area shape="rect" id="node1" href="$classMapper.html" title="Mapper" alt="" coords="5,31,71,57"/>
+<area shape="rect" id="node2" href="$classDisciplineMapper.html" title="DisciplineMapper" alt="" coords="119,5,241,32"/>
+<area shape="rect" id="node3" href="$classMaterialsMapper.html" title="MaterialsMapper" alt="" coords="121,56,239,83"/>
+</map>

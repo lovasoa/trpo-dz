@@ -1,0 +1,152 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.9.1"/>
+<title>TRPO: Исходный файл backend/Database.php</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<script type="text/javascript">
+  $(document).ready(function() { init_search(); });
+</script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td style="padding-left: 0.5em;">
+   <div id="projectname">TRPO
+   &#160;<span id="projectnumber">1.0.0</span>
+   </div>
+   <div id="projectbrief">сайт кафедры</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Создано системой Doxygen 1.8.9.1 -->
+<script type="text/javascript">
+var searchBox = new SearchBox("searchBox", "search",false,'Поиск');
+</script>
+  <div id="navrow1" class="tabs">
+    <ul class="tablist">
+      <li><a href="index.html"><span>Титульная&#160;страница</span></a></li>
+      <li><a href="pages.html"><span>Описания</span></a></li>
+      <li><a href="annotated.html"><span>Структуры&#160;данных</span></a></li>
+      <li class="current"><a href="files.html"><span>Файлы</span></a></li>
+      <li>
+        <div id="MSearchBox" class="MSearchBoxInactive">
+        <span class="left">
+          <img id="MSearchSelect" src="search/mag_sel.png"
+               onmouseover="return searchBox.OnSearchSelectShow()"
+               onmouseout="return searchBox.OnSearchSelectHide()"
+               alt=""/>
+          <input type="text" id="MSearchField" value="Поиск" accesskey="S"
+               onfocus="searchBox.OnSearchFieldFocus(true)" 
+               onblur="searchBox.OnSearchFieldFocus(false)" 
+               onkeyup="searchBox.OnSearchFieldChange(event)"/>
+          </span><span class="right">
+            <a id="MSearchClose" href="javascript:searchBox.CloseResultsWindow()"><img id="MSearchCloseImg" border="0" src="search/close.png" alt=""/></a>
+          </span>
+        </div>
+      </li>
+    </ul>
+  </div>
+  <div id="navrow2" class="tabs2">
+    <ul class="tablist">
+      <li><a href="files.html"><span>Файлы</span></a></li>
+      <li><a href="globals.html"><span>Список&#160;членов&#160;всех&#160;файлов</span></a></li>
+    </ul>
+  </div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="dir_8c739bbef76d64b22d6b0911c526dd76.html">backend</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="headertitle">
+<div class="title">Database.php</div>  </div>
+</div><!--header-->
+<div class="contents">
+<a href="Database_8php.html">См. документацию.</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;&lt;?php</div>
+<div class="line"><a name="l00002"></a><span class="lineno"><a class="line" href="classDatabase.html">    2</a></span>&#160;<span class="keyword">class </span><a class="code" href="classDatabase.html">Database</a> <span class="keyword">extends</span> PDO {</div>
+<div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;    <span class="comment">//Variable declaration</span></div>
+<div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;</div>
+<div class="line"><a name="l00005"></a><span class="lineno"><a class="line" href="classDatabase.html#a711797613cb863ca0756df789c396bf2">    5</a></span>&#160;    <span class="keyword">private</span> <a class="code" href="classDatabase.html#a711797613cb863ca0756df789c396bf2">$host</a> = <span class="stringliteral">&quot;127.0.0.1&quot;</span>;</div>
+<div class="line"><a name="l00006"></a><span class="lineno"><a class="line" href="classDatabase.html#a87911b6664e118fbbfa8da7bb7a04b0f">    6</a></span>&#160;    <span class="keyword">private</span> <a class="code" href="classDatabase.html#a87911b6664e118fbbfa8da7bb7a04b0f">$passwd</a> = <span class="stringliteral">&quot;&quot;</span>;</div>
+<div class="line"><a name="l00007"></a><span class="lineno"><a class="line" href="classDatabase.html#a0eb82aa5f81cf845de4b36cd653c42cf">    7</a></span>&#160;    <span class="keyword">private</span> <a class="code" href="classDatabase.html#a0eb82aa5f81cf845de4b36cd653c42cf">$username</a> = <span class="stringliteral">&quot;root&quot;</span>;</div>
+<div class="line"><a name="l00008"></a><span class="lineno"><a class="line" href="classDatabase.html#ac5111a571fffa2499732833bb7f0d8c1">    8</a></span>&#160;    <span class="keyword">private</span> <a class="code" href="classDatabase.html#ac5111a571fffa2499732833bb7f0d8c1">$dbname</a> = <span class="stringliteral">&quot;trpo&quot;</span>;</div>
+<div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;<span class="comment">/*</span></div>
+<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;<span class="comment">    private $host = &quot;mysql1.alwaysdata.com&quot;;</span></div>
+<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;<span class="comment">    private $passwd = &quot;trpo&quot;;</span></div>
+<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;<span class="comment">    private $username = &quot;ophir_trpo&quot;;</span></div>
+<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;<span class="comment">    private $dbname = &quot;ophir_trpo&quot;;</span></div>
+<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;<span class="comment">*/</span></div>
+<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;</div>
+<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;    <span class="comment">//Connect to DB when the class construct</span></div>
+<div class="line"><a name="l00017"></a><span class="lineno"><a class="line" href="classDatabase.html#a8d76a7dcbcc2272a7b9f44551b765c7d">   17</a></span>&#160;    <span class="keyword">public</span> <span class="keyword">function</span> <a class="code" href="classDatabase.html#a8d76a7dcbcc2272a7b9f44551b765c7d">__construct</a>(<a class="code" href="classDatabase.html#a711797613cb863ca0756df789c396bf2">$host</a>=NULL, <a class="code" href="classDatabase.html#ac5111a571fffa2499732833bb7f0d8c1">$dbname</a>=NULL, <a class="code" href="classDatabase.html#a0eb82aa5f81cf845de4b36cd653c42cf">$username</a>=NULL, <a class="code" href="classDatabase.html#a87911b6664e118fbbfa8da7bb7a04b0f">$passwd</a>=NULL) {</div>
+<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;        <span class="keywordflow">if</span>(isset(<a class="code" href="classDatabase.html#a711797613cb863ca0756df789c396bf2">$host</a>) &amp;&amp; !empty(<a class="code" href="classDatabase.html#a711797613cb863ca0756df789c396bf2">$host</a>)) {</div>
+<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;            $this-&gt;host = <a class="code" href="classDatabase.html#a711797613cb863ca0756df789c396bf2">$host</a>;</div>
+<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;        }</div>
+<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;</div>
+<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;        <span class="keywordflow">if</span>(isset(<a class="code" href="classDatabase.html#ac5111a571fffa2499732833bb7f0d8c1">$dbname</a>) &amp;&amp; !empty(<a class="code" href="classDatabase.html#ac5111a571fffa2499732833bb7f0d8c1">$dbname</a>)) {</div>
+<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;            $this-&gt;dbname = <a class="code" href="classDatabase.html#ac5111a571fffa2499732833bb7f0d8c1">$dbname</a>;</div>
+<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;        }</div>
+<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;</div>
+<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;        <span class="keywordflow">if</span>(isset(<a class="code" href="classDatabase.html#a0eb82aa5f81cf845de4b36cd653c42cf">$username</a>) &amp;&amp; !empty(<a class="code" href="classDatabase.html#a0eb82aa5f81cf845de4b36cd653c42cf">$username</a>)) {</div>
+<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;            $this-&gt;username = <a class="code" href="classDatabase.html#a0eb82aa5f81cf845de4b36cd653c42cf">$username</a>;</div>
+<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;        }</div>
+<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;</div>
+<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;        <span class="keywordflow">if</span>(isset(<a class="code" href="classDatabase.html#a87911b6664e118fbbfa8da7bb7a04b0f">$passwd</a>) &amp;&amp; !empty(<a class="code" href="classDatabase.html#a87911b6664e118fbbfa8da7bb7a04b0f">$passwd</a>)) {</div>
+<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;            $this-&gt;passwd = <a class="code" href="classDatabase.html#a87911b6664e118fbbfa8da7bb7a04b0f">$passwd</a>;</div>
+<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;        }</div>
+<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;</div>
+<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;        $opts = array(</div>
+<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;          PDO::MYSQL_ATTR_INIT_COMMAND =&gt; <span class="stringliteral">&#39;SET NAMES utf8&#39;</span></div>
+<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;        );</div>
+<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;</div>
+<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;        parent::__construct(<span class="stringliteral">&quot;mysql:dbname=$this-&gt;dbname;host=$this-&gt;host&quot;</span>, $this-&gt;username, $this-&gt;passwd, $opts);</div>
+<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;        parent::setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);</div>
+<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;        parent::setAttribute(PDO::ATTR_EMULATE_PREPARES, <span class="keyword">false</span>);</div>
+<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;    }</div>
+<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;</div>
+<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;}</div>
+<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;?&gt;</div>
+<div class="ttc" id="classDatabase_html_a87911b6664e118fbbfa8da7bb7a04b0f"><div class="ttname"><a href="classDatabase.html#a87911b6664e118fbbfa8da7bb7a04b0f">Database\$passwd</a></div><div class="ttdeci">$passwd</div><div class="ttdef"><b>Definition:</b> <a href="Database_8php_source.html#l00006">Database.php:6</a></div></div>
+<div class="ttc" id="classDatabase_html_a8d76a7dcbcc2272a7b9f44551b765c7d"><div class="ttname"><a href="classDatabase.html#a8d76a7dcbcc2272a7b9f44551b765c7d">Database\__construct</a></div><div class="ttdeci">__construct($host=NULL, $dbname=NULL, $username=NULL, $passwd=NULL)</div><div class="ttdef"><b>Definition:</b> <a href="Database_8php_source.html#l00017">Database.php:17</a></div></div>
+<div class="ttc" id="classDatabase_html"><div class="ttname"><a href="classDatabase.html">Database</a></div><div class="ttdef"><b>Definition:</b> <a href="Database_8php_source.html#l00002">Database.php:2</a></div></div>
+<div class="ttc" id="classDatabase_html_a711797613cb863ca0756df789c396bf2"><div class="ttname"><a href="classDatabase.html#a711797613cb863ca0756df789c396bf2">Database\$host</a></div><div class="ttdeci">$host</div><div class="ttdef"><b>Definition:</b> <a href="Database_8php_source.html#l00005">Database.php:5</a></div></div>
+<div class="ttc" id="classDatabase_html_a0eb82aa5f81cf845de4b36cd653c42cf"><div class="ttname"><a href="classDatabase.html#a0eb82aa5f81cf845de4b36cd653c42cf">Database\$username</a></div><div class="ttdeci">$username</div><div class="ttdef"><b>Definition:</b> <a href="Database_8php_source.html#l00007">Database.php:7</a></div></div>
+<div class="ttc" id="classDatabase_html_ac5111a571fffa2499732833bb7f0d8c1"><div class="ttname"><a href="classDatabase.html#ac5111a571fffa2499732833bb7f0d8c1">Database\$dbname</a></div><div class="ttdeci">$dbname</div><div class="ttdef"><b>Definition:</b> <a href="Database_8php_source.html#l00008">Database.php:8</a></div></div>
+</div><!-- fragment --></div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+Документация по TRPO. Последние изменения: Вс 5 Июн 2016 22:56:31. Создано системой &#160;<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="doxygen.png" alt="doxygen"/>
+</a> 1.8.9.1
+</small></address>
+</body>
+</html>
