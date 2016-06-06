@@ -2,8 +2,14 @@
 require_once("utils.php");
 
 abstract class Model implements MogetOtvetchat {
+  /// The next element in the responsability chain
   private $next = NULL;
 
+  /**
+  * Answer to the query if its "api" parameter corresponds
+  * to the "name" attribute of the object.
+  * If not, pass the request to the next element in the chain.
+  **/
   public function otvetchat(array $zaproc) {
     $type = (isset($zaproc["api"])) ? $zaproc["api"] : "";
     switch($type) {
@@ -32,6 +38,7 @@ abstract class Model implements MogetOtvetchat {
   public function setName($name) {
     $this->name = $name;
   }
+
   public function getName() {
     return $this->name;
   }

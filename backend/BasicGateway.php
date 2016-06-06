@@ -3,7 +3,7 @@ require_once("utils.php");
 
 /**
 * Represent a gateway to a database table.
-* This should be used so that business logic classes didn't have to interact with the database 
+* This should be used so that business logic classes didn't have to interact with the database
 */
 class BasicGateway {
   private $db = NULL;
@@ -23,9 +23,9 @@ class BasicGateway {
 
 /**
 * Update a given line in the table
-* @param data The current line
-* @param col Name of the column to update
-* @param val New value to insert
+* @param $data The current line
+* @param $col Name of the column to update
+* @param $val New value to insert
 * @throw Exception SQL error
 * @return An array containing information about the database query (number of affected rows)
 */
@@ -54,9 +54,9 @@ class BasicGateway {
 
 /**
 * Remove an element from the table
-* @param data array : The line to remove
-*/ 
-  public function delete($data) {
+* @param $data The line to remove
+*/
+  public function delete(array $data) {
     $idcol = $this->tablename . "_id";
     $val = $data[$idcol];
     return $this->db->exec("DELETE FROM ".($this->tablename)." WHERE `$idcol`=$val");

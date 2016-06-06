@@ -4,7 +4,7 @@ require_once("utils.php");
 class BasicModel extends Model {
   /**
   * Gateway to the database
-  * @var BasicGateway
+  * @var BasicGateway $gateway
   */
   private $gateway = NULL;
 

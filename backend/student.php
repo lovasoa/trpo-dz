@@ -107,9 +107,9 @@ class DisciplineMapper extends Mapper{
 
 class MaterialsMapper extends Mapper{
   /**
-  * @var Materials
+  * @var $materials Materials
   */
-  private $meterials;
+  private $materials;
   function __construct($db) {
     parent::__construct($db, "material");
   }
