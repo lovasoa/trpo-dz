@@ -36,6 +36,9 @@ class Request extends TabularData {
 class Main {
   public function __construct() {}
 
+  /**
+  * Create a Request and an associated ListViewer object, and display the result of the view
+  */
   public function do_request($apiname) {}
 }
 
