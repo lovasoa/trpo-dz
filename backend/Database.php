@@ -13,7 +13,7 @@ class Database extends PDO {
     private $dbname = "ophir_trpo";
 */
 
-    //Connect to DB when the class construct
+    /// Connect to DB when the class construct
     public function __construct($host=NULL, $dbname=NULL, $username=NULL, $passwd=NULL) {
         if(isset($host) && !empty($host)) {
             $this->host = $host;

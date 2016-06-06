@@ -2,10 +2,13 @@
 /**
 * Interface that modules entering the chain of responsability have to implement.
 * Defines a class that can answer to an HTTP request.
-*  \msc
-*    Request,MogetOtvetchat;
-*    Request->MogetOtvetchat [label="otvechat()"];
-*    Request<-MogetOtvetchat [label="fetch()"];
+* \msc
+*    Request,LayerCommunication,MogetOtvetchat;
+*    |||;
+*    Request->LayerCommunication [label="HTTP request"];
+*    LayerCommunication=>MogetOtvetchat [label="MogetOtvetchat::otvetchat($zaproc)"];
+*    LayerCommunication<<MogetOtvetchat [label="return string"];
+*    Request<-LayerCommunication [label="HTTP response"];
 *  \endmsc
 */
 interface MogetOtvetchat {

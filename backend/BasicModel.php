@@ -1,6 +1,9 @@
 <?php
 require_once("utils.php");
 
+/**
+* Represent a the business-logic model of a table in the database
+*/
 class BasicModel extends Model {
   /**
   * Gateway to the database
