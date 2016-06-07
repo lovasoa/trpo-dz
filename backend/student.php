@@ -123,7 +123,26 @@ class MaterialsMapper extends Mapper{
   }
 }
 
-///// Client interface code
+/** Client interface code
+* \msc
+*    LayerCommunication,StudentAdapter,Mapper,TableModule,Database;
+*    |||;
+*    LayerCommunication=>StudentAdapter [label="MogetOtvetchat::otvetchat($zaproc)"];
+*    StudentAdapter=>Mapper [label="read()"];
+*    Mapper->TableModule [label="instanciate"];
+*    TableModule note TableModule [label="instanciation"];
+*    Mapper=>Mapper [label="fillModel"];
+*    Mapper->Database [label="SELECT * FROM ..."];
+*    Mapper<-Database [label="SQL query results"];
+*    Mapper=>TableModule [label="add(array $row)"];
+*    ...;
+*    Mapper=>TableModule [label="add(array $row)"];
+*    Mapper=>TableModule [label="view()"];
+*    TableModule>>Mapper [label="return string"];
+*    Mapper>>StudentAdapter;
+*    StudentAdapter>>LayerCommunication;
+*  \endmsc
+**/
 class StudentAdapter extends Model {
   private $mapper = NULL;
   function __construct($name, Mapper $mapper) {
