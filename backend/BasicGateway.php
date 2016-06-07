@@ -4,6 +4,21 @@ require_once("utils.php");
 /**
 * Represent a gateway to a database table.
 * This should be used so that business logic classes didn't have to interact with the database
+*
+* \msc
+*    Model,BasicGateway,Database;
+*    |||;
+*    Model=>BasicGateway [label="BasicGateway::getAll()", URL="\ref getAll"];
+*    BasicGateway->Database [label="SELECT * FROM ..."];
+*    BasicGateway<-Database [label="DB pointer"];
+*    Model<<BasicGateway [label="return array"];
+*   ...;
+*    Model=>BasicGateway [label="BasicGateway::create()", URL="\ref create"];
+*    BasicGateway->Database [label="INSERT INTO ..."];
+*    BasicGateway<-Database [label="DB pointer"];
+*    Model<<BasicGateway [label="return array"];
+*    ...;
+*  \endmsc
 */
 class BasicGateway {
   private $db = NULL;
