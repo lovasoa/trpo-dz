@@ -125,8 +125,11 @@ class MaterialsMapper extends Mapper{
 
 /** Client interface code
 * \msc
-*    LayerCommunication,StudentAdapter,Mapper,TableModule,Database;
+*    hscale="2";
+*    Student [label="«user»\nStudent"],Request [label="User Interface", url="classRequest.html"],LayerCommunication,StudentAdapter,Mapper,TableModule,Database;
 *    |||;
+*    Student->Request;
+*    Request->LayerCommunication [label="HTTP request\napi.php?student=discipline"];
 *    LayerCommunication=>StudentAdapter [label="MogetOtvetchat::otvetchat($zaproc)"];
 *    StudentAdapter=>Mapper [label="read()"];
 *    Mapper->TableModule [label="instanciate"];
@@ -141,6 +144,8 @@ class MaterialsMapper extends Mapper{
 *    TableModule>>Mapper [label="return string"];
 *    Mapper>>StudentAdapter;
 *    StudentAdapter>>LayerCommunication;
+*    Request<-LayerCommunication [label="HTTP response\ntext/html"];
+*   Student<-Request;
 *  \endmsc
 **/
 class StudentAdapter extends Model {
