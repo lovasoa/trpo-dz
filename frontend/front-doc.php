@@ -32,7 +32,31 @@ class Request extends TabularData {
 }
 
 
-/// Controller of the whole UI
+/** Controller of the whole UI
+* \msc
+*  UI,Main,Request,ListViewer,Server;
+*  UI=>Main [label="do_request()"];
+*  Main->Request;
+*  Request abox Request [label="instanciation"];
+*  Main=>Request [label="read()"];
+*  Request->Server [label="API HTTP request"];
+*  Request<-Server [label="json response"];
+*  Request->ListViewer;
+*  ListViewer abox ListViewer [label="instanciation"];
+*  Request=>ListViewer [label="view(...)"];
+*  ListViewer=>ListViewer [label="viewElem(...)"];
+*  UI<-ListViewer [label="HTML element creation"];
+*  Request<<ListViewer [label="return"];
+*  Main<<Request [label="return"];
+*  |||;
+*  ...;
+*  |||;
+*  UI->ListViewer [label="HTML event"];
+*  ListViewer=>ListViewer [label="event handler"];
+*  Request<=ListViewer [label="update(...)"];
+*  Request->Server [label="API HTTP update"];
+* \endmsc
+*/
 class Main {
   public function __construct() {}
 
