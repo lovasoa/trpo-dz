@@ -14,6 +14,7 @@ interface Viewer {
 *  Main->Request [label="instantiate with the given viewer"];
 *  Request=>Viewer [label="view()\n(call to the generic interface)"];
 *  Viewer=>ListViewer [label="view()\n(call to the real implementation)"];
+*  ListViewer>>Request [label="result"];
 * \endmsc
 */
 class ListViewer implements Viewer{
