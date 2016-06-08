@@ -20,7 +20,7 @@
 </g>
 <!-- Node2 -->
 <g id="node2" class="node"><title>Node2</title>
-<g id="a_node2"><a xlink:href="classListViewer.html" target="_top" xlink:title="visualization under the form of a list of text fields ">
+<g id="a_node2"><a xlink:href="classListViewer.html" target="_top" xlink:title="{ListViewer\n||+ view()\l&#45; viewElem()\l&#45; viewInput()\l}">
 <polygon fill="white" stroke="black" points="0,-0.5 0,-79.5 71,-79.5 71,-0.5 0,-0.5"/>
 <text text-anchor="middle" x="35.5" y="-67.5" font-family="Helvetica,sans-Serif" font-size="10.00">ListViewer</text>
 <polyline fill="none" stroke="black" points="0,-60.5 71,-60.5 "/>

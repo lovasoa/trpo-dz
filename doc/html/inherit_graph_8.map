@@ -1,4 +1,4 @@
 <map id="Иерархия классов. Графический вид." name="Иерархия классов. Графический вид.">
 <area shape="rect" id="node1" href="$interfaceViewer.html" title="Represents a class that permits the visualization of a TabularData Element. " alt="" coords="5,5,68,32"/>
-<area shape="rect" id="node2" href="$classListViewer.html" title="visualization under the form of a list of text fields " alt="" coords="116,5,199,32"/>
+<area shape="rect" id="node2" href="$classListViewer.html" title="ListViewer" alt="" coords="116,5,199,32"/>
 </map>

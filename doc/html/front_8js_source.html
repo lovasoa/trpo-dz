@@ -1,0 +1,259 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.9.1"/>
+<title>TRPO: Исходный файл frontend/front.js</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<script type="text/javascript">
+  $(document).ready(function() { init_search(); });
+</script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td style="padding-left: 0.5em;">
+   <div id="projectname">TRPO
+   &#160;<span id="projectnumber">1.0.0</span>
+   </div>
+   <div id="projectbrief">сайт кафедры</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Создано системой Doxygen 1.8.9.1 -->
+<script type="text/javascript">
+var searchBox = new SearchBox("searchBox", "search",false,'Поиск');
+</script>
+  <div id="navrow1" class="tabs">
+    <ul class="tablist">
+      <li><a href="index.html"><span>Титульная&#160;страница</span></a></li>
+      <li><a href="pages.html"><span>Описания</span></a></li>
+      <li><a href="annotated.html"><span>Структуры&#160;данных</span></a></li>
+      <li class="current"><a href="files.html"><span>Файлы</span></a></li>
+      <li>
+        <div id="MSearchBox" class="MSearchBoxInactive">
+        <span class="left">
+          <img id="MSearchSelect" src="search/mag_sel.png"
+               onmouseover="return searchBox.OnSearchSelectShow()"
+               onmouseout="return searchBox.OnSearchSelectHide()"
+               alt=""/>
+          <input type="text" id="MSearchField" value="Поиск" accesskey="S"
+               onfocus="searchBox.OnSearchFieldFocus(true)" 
+               onblur="searchBox.OnSearchFieldFocus(false)" 
+               onkeyup="searchBox.OnSearchFieldChange(event)"/>
+          </span><span class="right">
+            <a id="MSearchClose" href="javascript:searchBox.CloseResultsWindow()"><img id="MSearchCloseImg" border="0" src="search/close.png" alt=""/></a>
+          </span>
+        </div>
+      </li>
+    </ul>
+  </div>
+  <div id="navrow2" class="tabs2">
+    <ul class="tablist">
+      <li><a href="files.html"><span>Файлы</span></a></li>
+      <li><a href="globals.html"><span>Список&#160;членов&#160;всех&#160;файлов</span></a></li>
+    </ul>
+  </div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="dir_ca0386ec887ae6362f93b0d653b52e0c.html">frontend</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="headertitle">
+<div class="title">front.js</div>  </div>
+</div><!--header-->
+<div class="contents">
+<a href="front_8js.html">См. документацию.</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="keyword">class </span><a class="code" href="classListViewer.html">ListViewer</a> {</div>
+<div class="line"><a name="l00002"></a><span class="lineno"><a class="line" href="classListViewer.html#ac16ceae6f0614928d34f29aefe7c1a4f">    2</a></span>&#160;  <a class="code" href="classListViewer.html#ac16ceae6f0614928d34f29aefe7c1a4f">view</a>(model) {</div>
+<div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;    <span class="keyword">const</span> tablename = model.apiname,</div>
+<div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;          array = model.results;</div>
+<div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;    <span class="keyword">const</span> $button = $(<span class="stringliteral">&quot;&lt;button&gt;Создать новый&lt;/button&gt;&quot;</span>)</div>
+<div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;                      .on(<span class="stringliteral">&quot;click&quot;</span>, evt=&gt;model.create());</div>
+<div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;    <span class="keywordflow">if</span> (array.length === 0) <span class="keywordflow">return</span> $button;</div>
+<div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;    <span class="keyword">const</span> headers = Object.keys(array[0]).filter(col =&gt; col!=tablename+<span class="stringliteral">&quot;_id&quot;</span>);</div>
+<div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;    <span class="keywordflow">return</span> $(<span class="stringliteral">&quot;&lt;div&gt;&quot;</span>).append(</div>
+<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;      $(<span class="stringliteral">&quot;&lt;ul&gt;&quot;</span>).append(</div>
+<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;        $.map(array, e =&gt; this.<a class="code" href="classListViewer.html#af4b5b5d3779e2340e9c50f547da713d2">viewElem</a>(model, headers, e)</div>
+<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;      ))</div>
+<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;    ).append($button);</div>
+<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;  }</div>
+<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;</div>
+<div class="line"><a name="l00016"></a><span class="lineno"><a class="line" href="classListViewer.html#a30d3f3ee58b156903b807487b8358561">   16</a></span>&#160;  <a class="code" href="classListViewer.html#a30d3f3ee58b156903b807487b8358561">viewElem</a>(model, headers, e) {</div>
+<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;    <span class="keywordflow">return</span> $(<span class="stringliteral">&quot;&lt;li&gt;&quot;</span>).append($.map(headers, h =&gt;</div>
+<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;      $(<span class="stringliteral">&quot;&lt;label&gt;&quot;</span>)</div>
+<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;          .text(h)</div>
+<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;          .append(this.<a class="code" href="classListViewer.html#a3ed7b994a09a85cb55194bb90a0ddd60">viewInput</a>(model, e, h))</div>
+<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;    )).append(</div>
+<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;      $(<span class="stringliteral">&quot;&lt;button&gt;Удалить&lt;/button&gt;&quot;</span>)</div>
+<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;        .on(<span class="stringliteral">&quot;click&quot;</span>, evt=&gt;model.delete(e))</div>
+<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;    )</div>
+<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;  }</div>
+<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;</div>
+<div class="line"><a name="l00027"></a><span class="lineno"><a class="line" href="classListViewer.html#a9f5119b4f49bb26aa0e2546f2bdf27c7">   27</a></span>&#160;  <a class="code" href="classListViewer.html#a9f5119b4f49bb26aa0e2546f2bdf27c7">viewInput</a>(model, e, h) {</div>
+<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;    <span class="keyword">const</span> handleEvt = evt =&gt; model.update(e,h,evt.target.value);</div>
+<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;    let input = $(<span class="stringliteral">&quot;&lt;input&gt;&quot;</span>)</div>
+<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;                .val(e[h])</div>
+<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;                .on(<span class="stringliteral">&quot;input&quot;</span>, handleEvt);</div>
+<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;    <span class="keywordflow">if</span> (h.endsWith(<span class="stringliteral">&quot;_id&quot;</span>)) {</div>
+<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;      input = $(<span class="stringliteral">&quot;&lt;select&gt;&quot;</span>);</div>
+<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;      input.change(handleEvt);</div>
+<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;      <span class="keyword">const</span> apiname = h.slice(0, -3);</div>
+<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;      fetch(`../backend/api.php?api=${apiname}&amp;type=list`)</div>
+<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;        .then(r =&gt; r.json())</div>
+<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;        .then(r =&gt; input.append(</div>
+<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;              $.map(r, op =&gt;</div>
+<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;                $(<span class="stringliteral">&quot;&lt;option&gt;&quot;</span>)</div>
+<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;                  .val(op[h])</div>
+<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;                  .attr(<span class="stringliteral">&quot;selected&quot;</span>, op[h]==e[h])</div>
+<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;                  .text(op[Object.keys(op).filter(x=&gt;!x.endsWith(<span class="stringliteral">&quot;_id&quot;</span>))[0]]))</div>
+<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;          ));</div>
+<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;    }</div>
+<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;    <span class="keywordflow">if</span> (h === <span class="stringliteral">&quot;filename&quot;</span>) {</div>
+<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;      let nameinput = input;</div>
+<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;      input = $(<span class="stringliteral">&quot;&lt;span&gt;&quot;</span>)</div>
+<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;                  .append(nameinput)</div>
+<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;                  .append(</div>
+<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;                    $(<span class="stringliteral">&quot;&lt;input type=&#39;file&#39;&gt;&quot;</span>)</div>
+<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;                      .on(<span class="stringliteral">&quot;change&quot;</span>, evt =&gt; {</div>
+<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;                            <span class="keyword">const</span> file = evt.target.files[0];</div>
+<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;                            <span class="keyword">const</span> filename = file.name;</div>
+<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;                            nameinput.val(filename);</div>
+<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;                            model.update(e,h,filename,</div>
+<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;                                          {method:<span class="stringliteral">&quot;POST&quot;</span>, <span class="stringliteral">&quot;body&quot;</span>:file});</div>
+<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;                          })</div>
+<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;                  )</div>
+<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;    }</div>
+<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;    <span class="keywordflow">return</span> input;</div>
+<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;  }</div>
+<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;}</div>
+<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;</div>
+<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;</div>
+<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;<span class="keyword">class </span><a class="code" href="classTabularData.html">TabularData</a> {</div>
+<div class="line"><a name="l00067"></a><span class="lineno"><a class="line" href="classTabularData.html#a852d3b0df4881cad245ae2d6ee3d70cd">   67</a></span>&#160;  <a class="code" href="classTabularData.html#a852d3b0df4881cad245ae2d6ee3d70cd">constructor</a>(viewer) {</div>
+<div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;    this.viewer = viewer;</div>
+<div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;  }</div>
+<div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;}</div>
+<div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;</div>
+<div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;<span class="keyword">class </span><a class="code" href="classRequest.html">Request</a> <span class="keyword">extends</span> <a class="code" href="classTabularData.html">TabularData</a> {</div>
+<div class="line"><a name="l00073"></a><span class="lineno"><a class="line" href="classRequest.html#a4eb2e2433fb587c6ea5a0802f5aad704">   73</a></span>&#160;  <a class="code" href="classRequest.html#a4eb2e2433fb587c6ea5a0802f5aad704">constructor</a>(viewer, apiname, viewEl) {</div>
+<div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;    super(viewer);</div>
+<div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;    this.apiname = apiname;</div>
+<div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160;    this.viewEl = viewEl;</div>
+<div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160;  }</div>
+<div class="line"><a name="l00078"></a><span class="lineno"><a class="line" href="classRequest.html#a64571309bfb3238c65fd3c2898f92440">   78</a></span>&#160;  <a class="code" href="classRequest.html#a64571309bfb3238c65fd3c2898f92440">read</a>() {</div>
+<div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160;    <span class="keywordflow">return</span> this.<a class="code" href="classRequest.html#ab1bf1d22d758cdf223986502814901bb">fetch</a>({type:<span class="stringliteral">&quot;list&quot;</span>})</div>
+<div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160;              .then(r =&gt; {<span class="keywordflow">return</span> this.results = r})</div>
+<div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160;              .then(() =&gt; this.<a class="code" href="classRequest.html#a0f892685b7f29b8f730ef8e4c207a263">view</a>());</div>
+<div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160;  }</div>
+<div class="line"><a name="l00083"></a><span class="lineno"><a class="line" href="classRequest.html#ab0aa127e55b8f282448dce2512779d98">   83</a></span>&#160;  <a class="code" href="classRequest.html#ab0aa127e55b8f282448dce2512779d98">update</a>(data, column, value, options) {</div>
+<div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160;    <span class="keyword">const</span> type = <span class="stringliteral">&quot;update&quot;</span>;</div>
+<div class="line"><a name="l00085"></a><span class="lineno">   85</span>&#160;    <span class="keywordflow">return</span> this.<a class="code" href="classRequest.html#ab1bf1d22d758cdf223986502814901bb">fetch</a>({</div>
+<div class="line"><a name="l00086"></a><span class="lineno">   86</span>&#160;                        type,</div>
+<div class="line"><a name="l00087"></a><span class="lineno">   87</span>&#160;                        data,</div>
+<div class="line"><a name="l00088"></a><span class="lineno">   88</span>&#160;                        column,</div>
+<div class="line"><a name="l00089"></a><span class="lineno">   89</span>&#160;                        value</div>
+<div class="line"><a name="l00090"></a><span class="lineno">   90</span>&#160;                    }, options);</div>
+<div class="line"><a name="l00091"></a><span class="lineno">   91</span>&#160;  }</div>
+<div class="line"><a name="l00092"></a><span class="lineno"><a class="line" href="classRequest.html#a435e7d7525d4bcd0ed5e34a469f3adf6">   92</a></span>&#160;  <a class="code" href="classRequest.html#a435e7d7525d4bcd0ed5e34a469f3adf6">create</a>() {</div>
+<div class="line"><a name="l00093"></a><span class="lineno">   93</span>&#160;    this.<a class="code" href="classRequest.html#ab1bf1d22d758cdf223986502814901bb">fetch</a>({type:<span class="stringliteral">&quot;create&quot;</span>}).then(()=&gt;this.<a class="code" href="classRequest.html#a64571309bfb3238c65fd3c2898f92440">read</a>());</div>
+<div class="line"><a name="l00094"></a><span class="lineno">   94</span>&#160;  }</div>
+<div class="line"><a name="l00095"></a><span class="lineno"><a class="line" href="classRequest.html#a40a3057c6efa705eaebdadfb413e85ff">   95</a></span>&#160;  <span class="keyword">delete</span>(data) {</div>
+<div class="line"><a name="l00096"></a><span class="lineno">   96</span>&#160;    this.<a class="code" href="classRequest.html#ab1bf1d22d758cdf223986502814901bb">fetch</a>({type:<span class="stringliteral">&quot;delete&quot;</span>,data}).then(()=&gt;this.<a class="code" href="classRequest.html#a64571309bfb3238c65fd3c2898f92440">read</a>());</div>
+<div class="line"><a name="l00097"></a><span class="lineno">   97</span>&#160;  }</div>
+<div class="line"><a name="l00098"></a><span class="lineno"><a class="line" href="classRequest.html#a6e0c63788874b78c596388dc254034db">   98</a></span>&#160;  <a class="code" href="classRequest.html#a6e0c63788874b78c596388dc254034db">fetch</a>(params, options) {</div>
+<div class="line"><a name="l00099"></a><span class="lineno">   99</span>&#160;    var qs = <span class="keyword">new</span> URLSearchParams(<span class="stringliteral">&quot;&quot;</span>);</div>
+<div class="line"><a name="l00100"></a><span class="lineno">  100</span>&#160;    qs.set(<span class="stringliteral">&quot;api&quot;</span>, this.apiname);</div>
+<div class="line"><a name="l00101"></a><span class="lineno">  101</span>&#160;    <span class="keywordflow">for</span> (var p in params)</div>
+<div class="line"><a name="l00102"></a><span class="lineno">  102</span>&#160;      qs.set(p, typeof(params[p])===<span class="stringliteral">&quot;string&quot;</span>?params[p]:JSON.stringify(params[p]));</div>
+<div class="line"><a name="l00103"></a><span class="lineno">  103</span>&#160;    let fetched = <a class="code" href="classRequest.html#ab1bf1d22d758cdf223986502814901bb">fetch</a>(<span class="stringliteral">&quot;../backend/api.php?&quot;</span> + qs, options)</div>
+<div class="line"><a name="l00104"></a><span class="lineno">  104</span>&#160;                      .then(x =&gt; x.json());</div>
+<div class="line"><a name="l00105"></a><span class="lineno">  105</span>&#160;    <span class="keywordflow">return</span> fetched;</div>
+<div class="line"><a name="l00106"></a><span class="lineno">  106</span>&#160;  }</div>
+<div class="line"><a name="l00107"></a><span class="lineno"><a class="line" href="classRequest.html#a64d8fade5d96c48aab6b936a770fd3ef">  107</a></span>&#160;  <a class="code" href="classRequest.html#a64d8fade5d96c48aab6b936a770fd3ef">view</a>(data) {</div>
+<div class="line"><a name="l00108"></a><span class="lineno">  108</span>&#160;    this.viewEl.empty();</div>
+<div class="line"><a name="l00109"></a><span class="lineno">  109</span>&#160;    this.viewEl.append(this.viewer.view(<span class="keyword">this</span>));</div>
+<div class="line"><a name="l00110"></a><span class="lineno">  110</span>&#160;    <span class="keywordflow">return</span> data;</div>
+<div class="line"><a name="l00111"></a><span class="lineno">  111</span>&#160;  }</div>
+<div class="line"><a name="l00112"></a><span class="lineno">  112</span>&#160;}</div>
+<div class="line"><a name="l00113"></a><span class="lineno">  113</span>&#160;</div>
+<div class="line"><a name="l00114"></a><span class="lineno">  114</span>&#160;</div>
+<div class="line"><a name="l00115"></a><span class="lineno">  115</span>&#160;<span class="keyword">class </span><a class="code" href="classMain.html">Main</a> {</div>
+<div class="line"><a name="l00116"></a><span class="lineno"><a class="line" href="classMain.html#ac3be686f7158684945c3a70b873ebfa9">  116</a></span>&#160;  <a class="code" href="classMain.html#ac3be686f7158684945c3a70b873ebfa9">constructor</a>() {</div>
+<div class="line"><a name="l00117"></a><span class="lineno">  117</span>&#160;    this.resEl = $(<span class="stringliteral">&quot;#result&quot;</span>);</div>
+<div class="line"><a name="l00118"></a><span class="lineno">  118</span>&#160;    this.tables = [<span class="stringliteral">&quot;professor&quot;</span>, <span class="stringliteral">&quot;discipline&quot;</span>, <span class="stringliteral">&quot;material&quot;</span>];</div>
+<div class="line"><a name="l00119"></a><span class="lineno">  119</span>&#160;    $(<span class="stringliteral">&quot;#apis&quot;</span>).append($.map(this.tables, t=&gt;</div>
+<div class="line"><a name="l00120"></a><span class="lineno">  120</span>&#160;        $(<span class="stringliteral">&quot;&lt;li&gt;&quot;</span>)</div>
+<div class="line"><a name="l00121"></a><span class="lineno">  121</span>&#160;          .attr(<span class="stringliteral">&quot;id&quot;</span>,t)</div>
+<div class="line"><a name="l00122"></a><span class="lineno">  122</span>&#160;          .text(t)</div>
+<div class="line"><a name="l00123"></a><span class="lineno">  123</span>&#160;          .on(<span class="stringliteral">&quot;click&quot;</span>, ()=&gt; this.<a class="code" href="classMain.html#ae6e19e5b87ec552b1989936f2c776300">do_request</a>(t))</div>
+<div class="line"><a name="l00124"></a><span class="lineno">  124</span>&#160;    ));</div>
+<div class="line"><a name="l00125"></a><span class="lineno">  125</span>&#160;    this.<a class="code" href="classMain.html#ae6e19e5b87ec552b1989936f2c776300">do_request</a>(this.tables[0]);</div>
+<div class="line"><a name="l00126"></a><span class="lineno">  126</span>&#160;  }</div>
+<div class="line"><a name="l00127"></a><span class="lineno">  127</span>&#160;</div>
+<div class="line"><a name="l00128"></a><span class="lineno"><a class="line" href="classMain.html#a9f58cf021c1efc0508d7dd25dfa006dc">  128</a></span>&#160;  <a class="code" href="classMain.html#a9f58cf021c1efc0508d7dd25dfa006dc">do_request</a>(apiname) {</div>
+<div class="line"><a name="l00129"></a><span class="lineno">  129</span>&#160;    <span class="keyword">const</span> viewer = <span class="keyword">new</span> <a class="code" href="classListViewer.html">ListViewer</a>();</div>
+<div class="line"><a name="l00130"></a><span class="lineno">  130</span>&#160;    this.current_request = <span class="keyword">new</span> <a class="code" href="classRequest.html">Request</a>(viewer, apiname, this.resEl);</div>
+<div class="line"><a name="l00131"></a><span class="lineno">  131</span>&#160;    this.current_request.read();</div>
+<div class="line"><a name="l00132"></a><span class="lineno">  132</span>&#160;  }</div>
+<div class="line"><a name="l00133"></a><span class="lineno">  133</span>&#160;}</div>
+<div class="line"><a name="l00134"></a><span class="lineno">  134</span>&#160;</div>
+<div class="line"><a name="l00135"></a><span class="lineno"><a class="line" href="front_8js.html#afe23c2654e4c5247a7e0769fe0b375bf">  135</a></span>&#160;var <a class="code" href="front_8js.html#afe23c2654e4c5247a7e0769fe0b375bf">main</a> = <span class="keyword">new</span> <a class="code" href="classMain.html">Main</a>;</div>
+<div class="ttc" id="classListViewer_html_ac16ceae6f0614928d34f29aefe7c1a4f"><div class="ttname"><a href="classListViewer.html#ac16ceae6f0614928d34f29aefe7c1a4f">ListViewer::view</a></div><div class="ttdeci">view(model)</div><div class="ttdef"><b>Definition:</b> <a href="front_8js_source.html#l00002">front.js:2</a></div></div>
+<div class="ttc" id="classMain_html_a9f58cf021c1efc0508d7dd25dfa006dc"><div class="ttname"><a href="classMain.html#a9f58cf021c1efc0508d7dd25dfa006dc">Main::do_request</a></div><div class="ttdeci">do_request(apiname)</div><div class="ttdef"><b>Definition:</b> <a href="front_8js_source.html#l00128">front.js:128</a></div></div>
+<div class="ttc" id="classListViewer_html_a30d3f3ee58b156903b807487b8358561"><div class="ttname"><a href="classListViewer.html#a30d3f3ee58b156903b807487b8358561">ListViewer::viewElem</a></div><div class="ttdeci">viewElem(model, headers, e)</div><div class="ttdef"><b>Definition:</b> <a href="front_8js_source.html#l00016">front.js:16</a></div></div>
+<div class="ttc" id="front_8js_html_afe23c2654e4c5247a7e0769fe0b375bf"><div class="ttname"><a href="front_8js.html#afe23c2654e4c5247a7e0769fe0b375bf">main</a></div><div class="ttdeci">var main</div><div class="ttdef"><b>Definition:</b> <a href="front_8js_source.html#l00135">front.js:135</a></div></div>
+<div class="ttc" id="classRequest_html_a64571309bfb3238c65fd3c2898f92440"><div class="ttname"><a href="classRequest.html#a64571309bfb3238c65fd3c2898f92440">Request::read</a></div><div class="ttdeci">read()</div><div class="ttdef"><b>Definition:</b> <a href="front_8js_source.html#l00078">front.js:78</a></div></div>
+<div class="ttc" id="classRequest_html_a0f892685b7f29b8f730ef8e4c207a263"><div class="ttname"><a href="classRequest.html#a0f892685b7f29b8f730ef8e4c207a263">Request\view</a></div><div class="ttdeci">view($data)</div><div class="ttdef"><b>Definition:</b> <a href="front-doc_8php_source.html#l00031">front-doc.php:31</a></div></div>
+<div class="ttc" id="classRequest_html"><div class="ttname"><a href="classRequest.html">Request</a></div><div class="ttdoc">Represents a table of data, linked to the server. </div><div class="ttdef"><b>Definition:</b> <a href="front-doc_8php_source.html#l00023">front-doc.php:23</a></div></div>
+<div class="ttc" id="classListViewer_html_a9f5119b4f49bb26aa0e2546f2bdf27c7"><div class="ttname"><a href="classListViewer.html#a9f5119b4f49bb26aa0e2546f2bdf27c7">ListViewer::viewInput</a></div><div class="ttdeci">viewInput(model, e, h)</div><div class="ttdef"><b>Definition:</b> <a href="front_8js_source.html#l00027">front.js:27</a></div></div>
+<div class="ttc" id="classListViewer_html_a3ed7b994a09a85cb55194bb90a0ddd60"><div class="ttname"><a href="classListViewer.html#a3ed7b994a09a85cb55194bb90a0ddd60">ListViewer\viewInput</a></div><div class="ttdeci">viewInput(Request $r, array $header, $data)</div><div class="ttdef"><b>Definition:</b> <a href="front-doc_8php_source.html#l00014">front-doc.php:14</a></div></div>
+<div class="ttc" id="classRequest_html_ab1bf1d22d758cdf223986502814901bb"><div class="ttname"><a href="classRequest.html#ab1bf1d22d758cdf223986502814901bb">Request\fetch</a></div><div class="ttdeci">fetch($params, $options)</div><div class="ttdef"><b>Definition:</b> <a href="front-doc_8php_source.html#l00030">front-doc.php:30</a></div></div>
+<div class="ttc" id="classMain_html_ac3be686f7158684945c3a70b873ebfa9"><div class="ttname"><a href="classMain.html#ac3be686f7158684945c3a70b873ebfa9">Main::constructor</a></div><div class="ttdeci">constructor()</div><div class="ttdef"><b>Definition:</b> <a href="front_8js_source.html#l00116">front.js:116</a></div></div>
+<div class="ttc" id="classRequest_html_a4eb2e2433fb587c6ea5a0802f5aad704"><div class="ttname"><a href="classRequest.html#a4eb2e2433fb587c6ea5a0802f5aad704">Request::constructor</a></div><div class="ttdeci">constructor(viewer, apiname, viewEl)</div><div class="ttdef"><b>Definition:</b> <a href="front_8js_source.html#l00073">front.js:73</a></div></div>
+<div class="ttc" id="classRequest_html_a64d8fade5d96c48aab6b936a770fd3ef"><div class="ttname"><a href="classRequest.html#a64d8fade5d96c48aab6b936a770fd3ef">Request::view</a></div><div class="ttdeci">view(data)</div><div class="ttdef"><b>Definition:</b> <a href="front_8js_source.html#l00107">front.js:107</a></div></div>
+<div class="ttc" id="classListViewer_html_af4b5b5d3779e2340e9c50f547da713d2"><div class="ttname"><a href="classListViewer.html#af4b5b5d3779e2340e9c50f547da713d2">ListViewer\viewElem</a></div><div class="ttdeci">viewElem(Request $r, array $headers, array $data)</div><div class="ttdef"><b>Definition:</b> <a href="front-doc_8php_source.html#l00012">front-doc.php:12</a></div></div>
+<div class="ttc" id="classTabularData_html"><div class="ttname"><a href="classTabularData.html">TabularData</a></div><div class="ttdoc">Represents the data and headers of a table. </div><div class="ttdef"><b>Definition:</b> <a href="front-doc_8php_source.html#l00018">front-doc.php:18</a></div></div>
+<div class="ttc" id="classMain_html"><div class="ttname"><a href="classMain.html">Main</a></div><div class="ttdef"><b>Definition:</b> <a href="front-doc_8php_source.html#l00060">front-doc.php:60</a></div></div>
+<div class="ttc" id="classRequest_html_ab0aa127e55b8f282448dce2512779d98"><div class="ttname"><a href="classRequest.html#ab0aa127e55b8f282448dce2512779d98">Request::update</a></div><div class="ttdeci">update(data, column, value, options)</div><div class="ttdef"><b>Definition:</b> <a href="front_8js_source.html#l00083">front.js:83</a></div></div>
+<div class="ttc" id="classRequest_html_a6e0c63788874b78c596388dc254034db"><div class="ttname"><a href="classRequest.html#a6e0c63788874b78c596388dc254034db">Request::fetch</a></div><div class="ttdeci">fetch(params, options)</div><div class="ttdef"><b>Definition:</b> <a href="front_8js_source.html#l00098">front.js:98</a></div></div>
+<div class="ttc" id="classListViewer_html"><div class="ttname"><a href="classListViewer.html">ListViewer</a></div><div class="ttdoc">visualization under the form of a list of text fields </div><div class="ttdef"><b>Definition:</b> <a href="front-doc_8php_source.html#l00009">front-doc.php:9</a></div></div>
+<div class="ttc" id="classMain_html_ae6e19e5b87ec552b1989936f2c776300"><div class="ttname"><a href="classMain.html#ae6e19e5b87ec552b1989936f2c776300">Main\do_request</a></div><div class="ttdeci">do_request($apiname)</div><div class="ttdef"><b>Definition:</b> <a href="front-doc_8php_source.html#l00066">front-doc.php:66</a></div></div>
+<div class="ttc" id="classRequest_html_a435e7d7525d4bcd0ed5e34a469f3adf6"><div class="ttname"><a href="classRequest.html#a435e7d7525d4bcd0ed5e34a469f3adf6">Request::create</a></div><div class="ttdeci">create()</div><div class="ttdef"><b>Definition:</b> <a href="front_8js_source.html#l00092">front.js:92</a></div></div>
+<div class="ttc" id="classTabularData_html_a852d3b0df4881cad245ae2d6ee3d70cd"><div class="ttname"><a href="classTabularData.html#a852d3b0df4881cad245ae2d6ee3d70cd">TabularData::constructor</a></div><div class="ttdeci">constructor(viewer)</div><div class="ttdef"><b>Definition:</b> <a href="front_8js_source.html#l00067">front.js:67</a></div></div>
+</div><!-- fragment --></div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+Документация по TRPO. Последние изменения: Вт 7 Июн 2016 21:05:56. Создано системой &#160;<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="doxygen.png" alt="doxygen"/>
+</a> 1.8.9.1
+</small></address>
+</body>
+</html>

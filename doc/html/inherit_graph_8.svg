@@ -19,7 +19,7 @@
 </g>
 <!-- Node2 -->
 <g id="node2" class="node"><title>Node2</title>
-<g id="a_node2"><a xlink:href="classListViewer.html" target="_top" xlink:title="visualization under the form of a list of text fields ">
+<g id="a_node2"><a xlink:href="classListViewer.html" target="_top" xlink:title="ListViewer">
 <polygon fill="white" stroke="black" points="83,-0.5 83,-19.5 145,-19.5 145,-0.5 83,-0.5"/>
 <text text-anchor="middle" x="114" y="-7.5" font-family="Helvetica,sans-Serif" font-size="10.00">ListViewer</text>
 </a>

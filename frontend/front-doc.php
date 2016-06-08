@@ -5,7 +5,17 @@ interface Viewer {
   public function view(Request $request);
 }
 
-/// visualization under the form of a list of text fields
+/** visualization under the form of a list of text fields
+* used to realize the bridge pattern
+* \msc
+*  hspace="2";
+*  Main,Request,Viewer,ListViewer;
+*  Main->ListViewer [label="instanciate"];
+*  Main->Request [label="instantiate with the given viewer"];
+*  Request=>Viewer [label="view()\n(call to the generic interface)"]
+*  Viewer=>ListViewer [label="view()\n(call to the real implementation)"];
+* \endmsc
+*/
 class ListViewer implements Viewer{
   public function view(Request $request) {}
 
