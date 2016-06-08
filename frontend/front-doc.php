@@ -8,11 +8,11 @@ interface Viewer {
 /** visualization under the form of a list of text fields
 * used to realize the bridge pattern
 * \msc
-*  hspace="2";
+*  hscale = "2";
 *  Main,Request,Viewer,ListViewer;
 *  Main->ListViewer [label="instanciate"];
 *  Main->Request [label="instantiate with the given viewer"];
-*  Request=>Viewer [label="view()\n(call to the generic interface)"]
+*  Request=>Viewer [label="view()\n(call to the generic interface)"];
 *  Viewer=>ListViewer [label="view()\n(call to the real implementation)"];
 * \endmsc
 */
